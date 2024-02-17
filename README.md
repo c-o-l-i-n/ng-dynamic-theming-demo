@@ -1,27 +1,29 @@
-# NgDynamicThemingDemo
+# 🎨 Angular Dynamic Theming Demo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.0.
+[Demo](https://github.com/c-o-l-i-n/ng-dynamic-theming-demo/assets/40863449/cbc529d5-1798-4228-ba71-de731070fb26)
 
-## Development server
+## 🏃 Getting started
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `npm install` to install dependencies.
 
-## Code scaffolding
+Run `npm run server` to start the backend server (`server.ts`) on port 3000. The server keeps an in-memory database of the client themes and products.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Run `npm start` to start the Angular dev server on port 4200.
 
-## Build
+Navigate to `http://localhost:4200/`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## 🔑 Key takeaways
 
-## Running unit tests
+When compared to maintaining a separate CSS stylesheet for each client, database-driven theming makes managing custom client themes a seamless user experience and a fantastic developer experience!
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Bringing themes into the database means we can allow users to instantly update their branding.
 
-## Running end-to-end tests
+We can use the `document.documentElement.style.setProperty()` method to set CSS variables at runtime. Then, we simply consume those CSS variables in the app.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Similarly, we can create a `<link>` element with a dynamically-generated Google Fonts URL to import any Google Font at runtime.
 
-## Further help
+See these key files for implementation details:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- [`theme.service.ts`](src/app/theme/theme.service.ts)
+- [`theme.resolver.ts`](src/app/theme/theme.resolver.ts)
+- [`app.routes.ts`](src/app/app.routes.ts)

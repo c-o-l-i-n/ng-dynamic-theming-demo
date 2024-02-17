@@ -1,17 +1,11 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
-  template: `
-    <h1>Welcome to {{title}}!</h1>
-
-    <router-outlet />
-  `,
-  styles: [],
+  imports: [RouterOutlet, RouterLink],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: ` <router-outlet /> `,
 })
-export class AppComponent {
-  title = 'ng-dynamic-theming-demo';
-}
+export class AppComponent {}

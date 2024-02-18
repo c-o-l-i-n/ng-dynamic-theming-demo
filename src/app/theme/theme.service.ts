@@ -25,7 +25,7 @@ export class ThemeService {
 
     // apply CSS variables
     rootStyle.setProperty('--primary-color', theme.primaryColor);
-    rootStyle.setProperty('--font-family', `${theme.fontFamily}, sans-serif`);
+    rootStyle.setProperty('--font-family', `"${theme.fontFamily}", sans-serif`);
     rootStyle.setProperty('--border-radius', `${theme.borderRadiusPx}px`);
 
     // import font from Google Fonts
